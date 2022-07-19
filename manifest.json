@@ -1,0 +1,58 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": {
+         "38": "image/producticon_48px_active.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "__MSG_inputtool_title__"
+   },
+   "commands": {
+      "next": {
+         "description": "__MSG_select_next_input_tool__",
+         "suggested_key": {
+            "default": "Alt+Shift+N"
+         }
+      },
+      "revert": {
+         "description": "__MSG_revert_last_input_tool__",
+         "suggested_key": {
+            "default": "Alt+Shift+R"
+         }
+      },
+      "toggle": {
+         "description": "__MSG_toggle_input_tool__",
+         "suggested_key": {
+            "default": "Alt+Shift+T"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "chext_loader.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_inputtool_description__",
+   "devtools_page": "devtools.html",
+   "icons": {
+      "128": "image/producticon_48px_active.png",
+      "16": "image/producticon_48px_active.png",
+      "32": "image/producticon_48px_active.png",
+      "48": "image/producticon_48px_active.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "31",
+   "options_page": "options.html",
+   "name": "google-input-tools",
+   "permissions": [ 
+      "http://*/*", 
+      "https://*/*", 
+      "tabs", 
+      "webNavigation"
+   ],
+   "version": "10.2.0.0",
+   "web_accessible_resources": [ "*" ]
+}
